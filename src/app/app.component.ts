@@ -1,6 +1,4 @@
-import { Component } from '@angular/core';
-import { MatIconRegistry } from '@angular/material/icon';
-import { DomSanitizer } from '@angular/platform-browser';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,12 +6,5 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'cypress-assets-bug';
 
-  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
-    iconRegistry.addSvgIcon(
-      'banana',
-      sanitizer.bypassSecurityTrustResourceUrl('assets/banana.svg')
-    );
-  }
 }
