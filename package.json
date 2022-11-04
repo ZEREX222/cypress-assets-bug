@@ -2,14 +2,17 @@
   "name": "cypress-assets-bug",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "ng": "nx",
+    "start": "nx serve web",
+    "build": "nx build web",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "component-tests": "nx run web:component-test",
+    "component-tests:watch": "nx run web:component-test --watch"
   },
   "private": true,
   "dependencies": {
+    "@nrwl/angular": "^14.5.4",
     "@angular/animations": "^14.2.0",
     "@angular/cdk": "^14.2.6",
     "@angular/common": "^14.2.0",
@@ -25,6 +28,8 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
+    "nx": "^14.8.5",
+    "@nrwl/cypress": "^14.8.4",
     "@angular-devkit/build-angular": "^14.2.2",
     "@angular/cli": "~14.2.2",
     "@angular/compiler-cli": "^14.2.0",
